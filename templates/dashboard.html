@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>CaseTrack Dashboard</title>
+</head>
+
+<body>
+
+<h2>CaseTrack Dashboard</h2>
+
+<p>Logged in as: admin</p>
+
+<a href="/create">Create Case</a>
+<a href="/logout">Logout</a>
+
+<hr>
+
+<h3>Case List</h3>
+
+<table border="1">
+
+<tr>
+<th>ID</th>
+<th>Case Name</th>
+<th>Status</th>
+<th>Date</th>
+</tr>
+
+{% for case in cases %}
+
+<tr>
+<td>{{case.id}}</td>
+<td>{{case.title}}</td>
+<td>{{case.status}}</td>
+<td>{{case.date}}</td>
+</tr>
+
+{% endfor %}
+
+</table>
+
+</body>
+</html>
